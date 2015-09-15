@@ -1,0 +1,21 @@
+{
+  "instrumentation": "node-jscoverage",
+  "sloc": 0,
+  "hits": 0,
+  "misses": 0,
+  "coverage": 0,
+  "files": [],
+  "stats": {
+    "suites": 0,
+    "tests": 0,
+    "passes": 0,
+    "pending": 0,
+    "failures": 0,
+    "start": "2014-11-28T13:37:35.581Z",
+    "end": "2014-11-28T13:37:35.581Z",
+    "duration": 0
+  },
+  "tests": [],
+  "failures": [],
+  "passes": []
+}

@@ -91,7 +91,8 @@
         // This is fired when the number is submitted or when a user scolls to the bottom of some results
         // Document is only ever modified here
         // Tested via UI testing
-        function generate(lazy) {
+        function generate(lazy) { // boolean lazy parameter
+
             // Test performance
             var t1 = performance.now();
 
@@ -102,6 +103,8 @@
             if (error !== "") {
                 // There is an error
                 errorMessage.innerHTML = error;
+                resetOutputs();
+                notification.innerHTML = "";
                 return;
             }
 
@@ -119,7 +122,8 @@
                 notification.innerHTML = "Completed in " + Math.round(t) / 1000 + " seconds";
             }
 
-            else { // lazy loading
+            else { // lazy calculating
+                addCommas();
                 updateOutputs();
             }
 
@@ -131,13 +135,19 @@
                 output_fizzBuzz.innerHTML = "";
                 output_fib.innerHTML = "";
             }
+            function addCommas() {
+                output_all.innerHTML += ',';
+                output_odd.innerHTML += ',';
+                output_even.innerHTML += ',';
+                output_fizzBuzz.innerHTML += ',';
+            }
             function updateOutputs() {
                 var sequences = getSequences(Number(input), currentCutoff, currentCutoff + lazyCutoff);
                 currentCutoff += lazyCutoff;
-                output_all.innerHTML += sequences.all + ',';
-                output_odd.innerHTML += sequences.odd + ',';
-                output_even.innerHTML += sequences.even + ',';
-                output_fizzBuzz.innerHTML += sequences.fizzBuzz + ',';
+                output_all.innerHTML += sequences.all;
+                output_odd.innerHTML += sequences.odd;
+                output_even.innerHTML += sequences.even;
+                output_fizzBuzz.innerHTML += sequences.fizzBuzz;
             }
         };
 
