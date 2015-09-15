@@ -1,0 +1,56 @@
+﻿body {
+    background-image: url('../Content/lift.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+.dark {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    padding: 30px;
+    color: lightgray;
+    overflow: auto;
+}
+
+input {
+    font-size: 2em;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+h1, h2, h3, h4, h5, h6, p, .error, .notification {
+    font-family: Sans, sans-serif;
+}
+
+.output {
+    font-family: Courier New, Courier, monospace;
+    word-break: break-all;
+    border: 1px solid black;
+    max-height: 300px;
+    overflow-x: auto;
+    overflow-y: scroll;
+    max-width: 80vw;
+}
+
+.error {
+    color: red;
+    display: inline;
+}
+
+.notification {
+    color: green;
+    display: inline;
+}
