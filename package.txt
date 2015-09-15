@@ -1,0 +1,5 @@
+{
+  "name": "Numeric Sequence Generator",
+  "description": "A sample application",
+  "version": "0.0.1"
+}

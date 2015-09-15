@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Numeric Sequence Calculator</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="css/StyleSheet.css" />
+</head>
+<body>
+    <div class="dark">
+        <div class="container">
+            <h1>Numeric Sequence Calculator</h1>
+            <h3>Instructions:</h3>
+            <p>Enter a number in the textbox below and click 'display' to show the four numeric sequences.</p>
+
+            <input type="text" id="numberInput" placeholder="Input your number here" onkeypress="return app.generate" />
+            <input type="button" id="displayButton" value="Display" />
+            <div class="error numberInput-error"></div>
+            <div class="notification"></div>
+
+            <h3>All numbers up to and including your number</h3>
+            <div class="output seq1 all"></div>
+            <h3>All odd numbers up to your number</h3>
+            <div class="output seq2 odd"></div>
+            <h3>All even numbers up to your number</h3>
+            <div class="output seq3 even"></div>
+            <h3>Variation of FizzBuzz</h3>
+            <div class="output seq4 fizzBuzz"></div>
+            <h3>All Fibonacci numbers up to your number</h3>
+            <div class="output seq5 fib"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/startup.js"></script>
+</body>
+</html>
